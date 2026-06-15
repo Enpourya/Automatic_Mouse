@@ -8,13 +8,25 @@
 ![License](https://img.shields.io/badge/license-MIT-yellow.svg)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey.svg)
 
-**A User-Friendly Desktop Application for Learning Linux Commands**
+**A User-Friendly Desktop Application for Automatic Mouse**
 
 [Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Screenshots](#-screenshots) • [Architecture](#-architecture)
 
 </div>
 
 
+# Automatic_Mouse
+
+An application to train the mouse and save mouse behavior for tasks that you do regularly and do not need analysis.
+
+In fact, this program can save the mouse movements that you have previously performed and imitate them.
+
+You can program the mouse for different tasks and use it when needed.
+
+I hope you enjoy it.
+
+
+<div align="RTL">
 ## معرفی
 
 این نرم‌افزار یک ابزار قدرتمند برای ضبط و پخش خودکار حرکات ماوس و کلیک‌ها است. با استفاده از این برنامه می‌توانید فعالیت‌های تکراری ماوس را ضبط کرده و سپس با تنظیمات دلخواه (تعداد تکرار، تاخیر و سرعت) پخش کنید.
@@ -37,15 +49,6 @@
 pip install pyautogui pynput keyboard
 ```
 
-# Automatic_Mouse
-
-An application to train the mouse and save mouse behavior for tasks that you do regularly and do not need analysis.
-
-In fact, this program can save the mouse movements that you have previously performed and imitate them.
-
-You can program the mouse for different tasks and use it when needed.
-
-I hope you enjoy it.
 
 ## نحوه استفاده
 
@@ -71,24 +74,26 @@ I hope you enjoy it.
 
 تاخیر بین تکرارها: فاصله زمانی بین هر بار اجرا (0 تا 10 ثانیه)
 
-سرعت پخش:
+✅ سرعت پخش:
 
-1x = سرعت اصلی ضبط شده
+- 1x = سرعت اصلی ضبط شده
 
-0.5x = نصف سرعت (آهسته‌تر)
+- 0.5x = نصف سرعت (آهسته‌تر)
 
-2x = دو برابر سرعت (سریع‌تر)
+- 2x = دو برابر سرعت (سریع‌تر)
 
-سپس روی دکمه "پخش رول" کلیک کنید.
+🎯 سپس روی دکمه "پخش رول" کلیک کنید.
 
-برای توقف پخش در حین اجرا:
+✅ برای توقف پخش در حین اجرا:
 
 کلیک روی دکمه "توقف پخش (Ctrl)"
 
 یا فشردن کلید Ctrl
 
 ### 3. مدیریت رول‌ها
+
 ✅ ذخیره  رول
+
 بعد از ضبط رول، روی دکمه "ذخیره رول" کلیک کنید
 
 نام فایل را انتخاب کرده و ذخیره کنید
@@ -96,6 +101,7 @@ I hope you enjoy it.
 فایل‌ها با فرمت JSON در پوشه automation_rolls ذخیره می‌شوند
 
 ✅ بارگذاری رول
+
 روی دکمه "بارگذاری رول" کلیک کنید
 
 فایل JSON مورد نظر را انتخاب کنید
@@ -103,12 +109,59 @@ I hope you enjoy it.
 رول بارگذاری شده آماده پخش است
 
 ✅ حذف رول
+
 از لیست رول‌ها، روی نام رول مورد نظر کلیک کنید
 
 روی دکمه "حذف رول" کلیک کنید
 
 ✅ تازه‌سازی لیست
+
 برای به‌روزرسانی لیست رول‌های نمایش داده شده، روی دکمه "تازه‌سازی" کلیک کنید.
 
 ✅ ساختار فایل‌های ذخیره شده
+
 فایل‌های ذخیره شده با فرمت JSON هستند و هر عمل (اکشن) شامل اطلاعات زیر است:
+</div>
+```JSON
+[
+  {
+    "type": "move",
+    "x": 500,
+    "y": 300,
+    "time": 1700000000.123
+  },
+  {
+    "type": "click",
+    "x": 500,
+    "y": 300,
+    "button": "left",
+    "time": 1700000000.456
+  }
+]
+```
+<div align="RTL">
+## میانبرهای صفحه کلید
+کلید	عملکرد
+- F1	شروع ضبط
+- F2	توقف ضبط
+- Ctrl	توقف پخش
+
+✅ نکات مهم
+
+⚠️ هشدارها:
+
+در حین پخش رول، از حرکت دادن ماوس خودداری کنید زیرا ممکن است در اجرای دقیق رول اختلال ایجاد شود
+
+برای توقف اضطراری پخش، کلید Ctrl را فشار دهید
+
+مطمئن شوید برنامه‌های دیگر در زمان پخش رول، پنجره فعال را تغییر ندهند
+
+💡 توصیه‌ها:
+
+قبل از ضبط رول‌های طولانی، محل قرارگیری ماوس را مشخص کنید
+
+برای دقت بیشتر، از سرعت پخش 1x استفاده کنید
+
+رول‌های مهم را با نام‌های معنی‌دار ذخیره کنید
+
+</div>
